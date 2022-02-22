@@ -1,41 +1,25 @@
 {
-  "name": "@mermaid-js/mermaid-cli",
+  "name": "mmd2svg",
   "version": "8.14.0",
-  "description": "Command-line interface for mermaid",
+  "description": "Convert mermaid diagrams to SVG",
   "license": "MIT",
   "repository": "git@github.com:mermaid-js/mermaid-cli.git",
   "author": "Tyler Long <tyler4long@gmail.com>",
-  "bin": {
-    "mmdc": "./index.bundle.js"
-  },
   "scripts": {
-    "upgrade": "yarn-upgrade-all && source copy_modules.sh",
-    "prepublishOnly": "babel ./src/index.js --out-file ./index.bundle.js",
     "test": "node ./src-test/test.js"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
-    "commander": "^9.0.0",
     "mermaid": "^8.9.0",
     "puppeteer": "^13.0.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
-    "standard": "^16.0.1",
-    "yarn-upgrade-all": "^0.6.1"
+    "standard": "^16.0.1"
   },
   "files": [
-    "index.bundle.js",
+    "index.js",
     "mermaid.min.js",
     "index.html",
     "fontawesome/*"
-  ],
-  "standard": {
-    "ignore": [
-      "index.bundle.js"
-    ]
-  }
+  ]
 }
